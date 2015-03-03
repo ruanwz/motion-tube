@@ -1,5 +1,5 @@
 # -*- encoding: utf-8 -*-
-VERSION = "0.0.1"
+VERSION = "0.0.2"
 
 Gem::Specification.new do |spec|
   spec.name          = "motion-tube"
@@ -19,6 +19,8 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
+  spec.add_dependency "motion-cocoapods", ">= 1.4.1"
+  spec.add_dependency "motion-require", ">= 0.1"
   spec.add_dependency "afmotion"
   spec.add_dependency "sugarcube"
 
