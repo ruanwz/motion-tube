@@ -46,7 +46,7 @@ module MotionTube
       vedio_list = {}
       media.zip(sig, type).each do |m|
         m_type = m[2][0].match(/(flv|mp4|webm|3gp)/)[0]
-        u = (m[0][0])
+        u = (m[0][0]).unescape_url
         if m[1]
           u += "&signature=" + m[1][0]
         end
