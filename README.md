@@ -1,5 +1,6 @@
 # motion-tube
-
+[![Build
+Status](https://travis-ci.org/ruanwz/motion-tube.svg)](https://travis-ci.org/ruanwz/motion-tube)
 TODO: Write a gem description
 
 ## Installation
