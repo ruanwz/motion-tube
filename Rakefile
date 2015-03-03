@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 $:.unshift("/Library/RubyMotion/lib")
 require 'motion/project/template/ios'
-require './lib/youtube_service'
+require './lib/motion-tube'
 
 begin
   require 'bundler'
@@ -9,8 +9,10 @@ begin
   Bundler.require
 rescue LoadError
 end
+require 'afmotion'
+require 'sugarcube-foundation'
 
 Motion::Project::App.setup do |app|
   # Use `rake config' to see complete project settings.
-  app.name = 'youtube_service'
+  app.name = 'motion-tube'
 end

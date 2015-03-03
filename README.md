@@ -1,4 +1,4 @@
-# youtube_service
+# motion-tube
 
 TODO: Write a gem description
 
@@ -6,7 +6,7 @@ TODO: Write a gem description
 
 Add this line to your application's Gemfile:
 
-    gem 'youtube_service'
+    gem 'motion-tube'
 
 And then execute:
 
@@ -14,7 +14,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install youtube_service
+    $ gem install motion-tube
 
 ## Usage
 
