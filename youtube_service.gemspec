@@ -1,13 +1,13 @@
 # -*- encoding: utf-8 -*-
-VERSION = "1.0"
+VERSION = "0.0.1"
 
 Gem::Specification.new do |spec|
   spec.name          = "youtube_service"
   spec.version       = VERSION
   spec.authors       = ["David Ruan"]
   spec.email         = ["ruanwz@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Get youtube video info}
+  spec.summary       = %q{Get youtube video info}
   spec.homepage      = ""
   spec.license       = ""
 
