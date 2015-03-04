@@ -36,6 +36,8 @@ To get back a playlist
   parser.parse(source: {playlist: "PL7QBhjs24ko_dq2Nm1NovIqIAr7kAuWJb"}) do |result|
     puts result
   end
+  => {"Alphablocks Series 3"=>[{"title"=>"Alphablocks Series 3 - Ants", "href"=>"http://www.youtube.com/watch?v=pzr4uMCUMX0&feature=youtube_gdata"}]}
+    ...
 ```
 
 ## Contributing

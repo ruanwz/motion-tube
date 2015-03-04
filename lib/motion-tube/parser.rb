@@ -1,9 +1,9 @@
 module MotionTube
   class Parser
-    attr_accessor :rest_client, :url, :response, :options
+    attr_accessor :rest_client, :gdata_client, :url, :response, :options
     def initialize(options = {})
       self.options = options
-      set_rest_client "http://www.youtube.com"
+      set_clients
     end
 
     def parse(options, &block)
@@ -63,13 +63,19 @@ module MotionTube
       if options[:source][:url]
         get_video_info_from_id id, &result_callback
       elsif playlist = options[:source][:playlist]
-        set_rest_client("http://gdata.youtube.com")
         get_video_info_from_playlist playlist, &result_callback
       end
     end
 
-    def set_rest_client(url)
+    def set_clients
+      url = "http://www.youtube.com"
+      gdata_url = "http://gdata.youtube.com"
       self.rest_client = AFMotion::Client.build(url) do
+        header "Accept", "application/json"
+        response_serializer :json
+      end
+
+      self.gdata_client = AFMotion::Client.build(gdata_url) do
         header "Accept", "application/json"
         response_serializer :json
       end
@@ -77,7 +83,7 @@ module MotionTube
 
     def get_video_info_from_playlist(playlist, &result_callback)
       path = "/feeds/api/playlists/#{playlist}?v=2&alt=json&max-results=50"
-      rest_client.get(path) do |result|
+      gdata_client.get(path) do |result|
         self.response = result.body
 
         hash = result.object
